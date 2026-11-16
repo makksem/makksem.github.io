@@ -3,164 +3,315 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO: заголовок и описание с городом -->
-    <title>Создание сайтов в Архангельске — Максим, написание кода на заказ</title>
-    <meta name="description" content="Создам сайт-визитку, лендинг или напишу код на заказ в Архангельске. HTML, CSS, Python. Быстро, с вниманием к деталям. Работаю с местным бизнесом и онлайн.">
-    <meta name="keywords" content="заказать сайт Архангельск, создание сайтов Архангельск, сайт-визитка Архангельск, лендинг Архангельск, написать код на заказ">
-    
-    <!-- Open Graph -->
+    <title>Создание сайтов в Архангельске — Максим, сайты и код для малого бизнеса</title>
+    <meta name="description" content="Создам сайт-визитку, лендинг или напишу код на Python в Архангельске. Цена 500 ₽, сроки 1–3 дня. Отвечу в течение дня, консультация бесплатно.">
+    <meta name="keywords" content="заказать сайт Архангельск, создание сайтов Архангельск, сайт-визитка Архангельск, лендинг Архангельск, Python на заказ">
     <meta property="og:title" content="Создание сайтов в Архангельске — Максим">
-    <meta property="og:description" content="Создам сайт-визитку, лендинг или напишу код. Архангельск и онлайн. Свяжитесь для обсуждения.">
+    <meta property="og:description" content="Сайт-визитка, лендинг, код на Python. Цена 500 ₽, сроки 1–3 дня. Архангельск и онлайн.">
     <meta property="og:type" content="website">
-    
-    <!-- Структурированные данные с адресом -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Максим — создание сайтов в Архангельске",
-      "description": "Создание сайтов и написание кода на заказ в Архангельске",
+      "description": "Создание сайтов и написание кода на заказ",
       "url": "https://ваш-логин.github.io",
       "email": "maxdmbort@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Архангельск",
-        "addressCountry": "RU"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Архангельск"
-      },
-      "sameAs": [
-        "https://t.me/makk_sem",
-        "https://instagram.com/makk_sem"
-      ]
+      "address": {"@type": "PostalAddress", "addressLocality": "Архангельск", "addressCountry": "RU"},
+      "areaServed": {"@type": "City", "name": "Архангельск"},
+      "sameAs": ["https://t.me/makk_sem"]
     }
     </script>
-
     <style>
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
-            font-family: Arial, sans-serif;
-            background: #f0f4f8;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #eef4fb 0%, #f8fafc 100%);
             margin: 0;
             padding: 0;
-            color: #333;
+            color: #2d3748;
+            line-height: 1.6;
         }
-        header {
-            background: #2b6cb0;
-            color: white;
-            padding: 40px 20px;
+        nav {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(8px);
+            padding: 14px 20px;
             text-align: center;
+            box-shadow: 0 2px 12px rgba(43,108,176,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
-        header h1 {
-            margin: 10px 0 5px;
-            font-size: 32px;
+        nav a {
+            color: #2b6cb0;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: 600;
+            font-size: 15px;
+            position: relative;
         }
-        header p {
-            margin: 0;
-            opacity: 0.95;
-            font-size: 18px;
+        nav a::after {
+            content: '';
+            position: absolute;
+            left: 0; bottom: -4px;
+            width: 0; height: 2px;
+            background: #38a169;
+            transition: width 0.3s;
         }
+        nav a:hover::after { width: 100%; }
+
+        header {
+            background: linear-gradient(135deg, #2b6cb0 0%, #1e4e8c 60%, #2c5282 100%);
+            color: white;
+            padding: 60px 20px 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -20%;
+            width: 140%; height: 200%;
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.12) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(56,161,105,0.18) 0%, transparent 40%);
+            animation: float 12s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translate(0,0) scale(1); }
+            50% { transform: translate(-20px, 20px) scale(1.05); }
+        }
+        header > * { position: relative; z-index: 1; }
+        header h1 { margin: 12px 0 8px; font-size: 34px; letter-spacing: -0.5px; }
+        header p { margin: 0 0 18px; opacity: 0.95; font-size: 18px; }
         .avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid white;
+            width: 120px; height: 120px; border-radius: 50%;
+            object-fit: cover; border: 4px solid white;
             margin-bottom: 10px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+            animation: pulse 3s ease-in-out infinite;
         }
-        main {
-            max-width: 700px;
-            margin: 30px auto;
-            padding: 0 20px;
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 8px 25px rgba(0,0,0,0.25); }
+            50% { box-shadow: 0 8px 35px rgba(56,161,105,0.45); }
         }
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #38a169, #2f855a);
+            color: white;
+            padding: 15px 32px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: bold;
+            margin-top: 12px;
+            box-shadow: 0 6px 20px rgba(56,161,105,0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-btn::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(56,161,105,0.55);
+        }
+        .cta-btn:hover::after { left: 100%; }
+        .microcopy { font-size: 13px; opacity: 0.85; margin-top: 10px; }
+
+        main { max-width: 750px; margin: 35px auto; padding: 0 20px; }
         .card {
             background: white;
-            border-radius: 10px;
-            padding: 25px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: box-shadow 0.3s;
+            border-radius: 14px;
+            padding: 26px;
+            margin-bottom: 22px;
+            box-shadow: 0 4px 18px rgba(43,108,176,0.08);
+            border: 1px solid rgba(43,108,176,0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .card.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s;
         }
         .card:hover {
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(43,108,176,0.15);
         }
         .card h2 {
             margin-top: 0;
             color: #2b6cb0;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        a {
-            color: #2b6cb0;
-            transition: 0.3s;
-        }
-        .social-btn {
+        .card h2::before {
+            content: '';
             display: inline-block;
-            background: #2b6cb0;
-            color: white;
-            padding: 10px 20px;
+            width: 5px; height: 22px;
+            background: linear-gradient(180deg, #38a169, #2b6cb0);
+            border-radius: 3px;
+        }
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px dashed #e2e8f0;
+            transition: padding-left 0.2s;
+        }
+        .price-row:hover { padding-left: 6px; }
+        .price-row:last-child { border-bottom: none; }
+        .price {
+            font-weight: bold;
+            color: #2f855a;
+            white-space: nowrap;
+            background: #f0fff4;
+            padding: 4px 10px;
             border-radius: 6px;
-            text-decoration: none;
-            margin: 5px 5px 5px 0;
-            transition: background 0.3s;
         }
-        .social-btn:hover {
-            background: #1e4e8c;
+        .steps { counter-reset: step; list-style: none; padding: 0; }
+        .steps li {
+            counter-increment: step;
+            padding: 12px 0 12px 46px;
+            position: relative;
         }
+        .steps li::before {
+            content: counter(step);
+            position: absolute; left: 0; top: 12px;
+            width: 30px; height: 30px; border-radius: 50%;
+            background: linear-gradient(135deg, #2b6cb0, #38a169);
+            color: white;
+            text-align: center; line-height: 30px; font-weight: bold;
+            box-shadow: 0 4px 10px rgba(43,108,176,0.3);
+        }
+        .project {
+            border-left: 4px solid #38a169;
+            padding: 5px 0 5px 16px;
+            margin-bottom: 18px;
+            transition: border-color 0.3s, padding-left 0.3s;
+        }
+        .project:hover {
+            border-color: #2b6cb0;
+            padding-left: 22px;
+        }
+        .project h3 { margin: 0 0 6px; font-size: 18px; color: #2d3748; }
+        .project p { margin: 0 0 6px; font-size: 14px; color: #555; }
+        a { color: #2b6cb0; }
         footer {
             text-align: center;
-            padding: 20px;
-            color: #777;
+            padding: 30px;
+            color: #718096;
             font-size: 14px;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 20px;
+        }
+        @media (max-width: 500px) {
+            nav a { margin: 0 6px; font-size: 13px; }
+            header h1 { font-size: 25px; }
+            header { padding: 45px 20px 40px; }
+            .card { padding: 20px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            * { animation: none !important; transition: none !important; }
+            .card { opacity: 1; transform: none; }
         }
     </style>
 </head>
 <body>
 
+    <nav>
+        <a href="#services">Услуги</a>
+        <a href="#works">Работы</a>
+        <a href="#prices">Цены</a>
+        <a href="#contacts">Контакты</a>
+    </nav>
+
     <header>
         <img src="avatar.jpg" alt="Максим — создание сайтов в Архангельске" class="avatar">
-        <h1>Создам для вас сайт или напишу код</h1>
-        <p>Архангельск и онлайн — HTML, CSS, Python</p>
+        <h1>Максим — сайты и код для малого бизнеса</h1>
+        <p>Архангельск и онлайн · HTML, CSS, Python</p>
+        <a href="https://t.me/makk_sem" class="cta-btn" target="_blank">✈️ Написать в Telegram</a>
+        <p class="microcopy">Отвечу в течение дня. Консультация бесплатно.</p>
     </header>
 
     <main>
-        <div class="card">
+        <div class="card" id="services">
             <h2>Что я могу сделать для вас</h2>
             <ul>
                 <li><strong>Сайт-визитка</strong> — расскажет о вашей деятельности и поможет найти клиентов</li>
                 <li><strong>Лендинг</strong> — одностраничный сайт для услуги или продукта</li>
-                <li><strong>Написание кода</strong> — HTML, CSS, Python под вашу задачу</li>
+                <li><strong>Скрипты на Python</strong> — парсеры, автоматизация, небольшие программы под задачу</li>
                 <li><strong>Доработка существующего сайта</strong> — правки, улучшения, исправления</li>
             </ul>
         </div>
 
-        <div class="card">
-            <h2>Мои навыки</h2>
-            <ul>
-                <li>HTML — структура сайта</li>
-                <li>CSS — оформление и адаптивность</li>
-                <li>Python — написание кода под задачи</li>
-            </ul>
+        <div class="card" id="works">
+            <h2>Мои работы</h2>
+            <div class="project">
+                <h3>Сайт-визитка для веб-разработчика</h3>
+                <p>HTML, CSS, адаптивная вёрстка, размещение на GitHub Pages. С этой страницы вы сейчас и читаете этот кейс.</p>
+                <a href="https://ваш-логин.github.io" target="_blank">Открыть сайт →</a>
+            </div>
+            <p style="font-size:14px; color:#777; margin-top:15px;">Здесь появятся новые работы по мере выполнения заказов.</p>
+        </div>
+
+        <div class="card" id="prices">
+            <h2>Цены и сроки</h2>
+            <div class="price-row"><span>Сайт-визитка</span><span class="price">500 ₽ · 1–3 дня</span></div>
+            <div class="price-row"><span>Лендинг</span><span class="price">500 ₽ · 1–3 дня</span></div>
+            <div class="price-row"><span>Скрипт на Python</span><span class="price">500 ₽ · 1–3 дня</span></div>
+            <div class="price-row"><span>Доработка сайта</span><span class="price">500 ₽ · 1–3 дня</span></div>
+            <p style="font-size:13px; color:#777; margin-top:10px;">Фиксированная цена для первых заказов. Срок зависит от объёма — точный назову после обсуждения задачи.</p>
         </div>
 
         <div class="card">
-            <h2>Кому подойдут мои услуги</h2>
-            <p>Работаю с малым бизнесом, мастерами и специалистами в Архангельске, а также с заказчиками из других городов онлайн. Если вам нужен простой сайт без переплаты студии — напишите, обсудим.</p>
+            <h2>Как я работаю</h2>
+            <ol class="steps">
+                <li>Обсуждаем задачу и ваши пожелания</li>
+                <li>Согласуем сроки и стоимость</li>
+                <li>Делаю и показываю промежуточный результат</li>
+                <li>Вношу правки и сдаю готовую работу</li>
+            </ol>
         </div>
 
-        <div class="card">
+        <div class="card" id="contacts">
             <h2>Связаться и заказать</h2>
             <p>Напишите мне — обсудим задачу и сроки.</p>
             <p>Email: <a href="mailto:maxdmbort@gmail.com">maxdmbort@gmail.com</a></p>
             <p>Telegram: <a href="https://t.me/makk_sem" target="_blank">@makk_sem</a></p>
-            <a href="https://t.me/makk_sem" class="social-btn" target="_blank">✈️ Написать в Telegram</a>
-            <a href="https://instagram.com/makk_sem" class="social-btn" target="_blank">📸 Instagram</a>
+            <a href="https://t.me/makk_sem" class="cta-btn" target="_blank">✈️ Написать в Telegram</a>
+            <p class="microcopy" style="color:#555;">Отвечу в течение дня. Консультация бесплатно.</p>
         </div>
     </main>
 
     <footer>
         © 2026 Максим — создание сайтов в Архангельске
     </footer>
+
+    <script>
+        // Плавное появление карточек при прокрутке
+        const cards = document.querySelectorAll('.card');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        cards.forEach(card => observer.observe(card));
+    </script>
 
 </body>
 </html>
