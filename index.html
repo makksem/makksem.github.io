@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя первая страница</title>
+    <style>
+        /* Это CSS — оформление */
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background: #2b6cb0;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        main {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        button {
+            background: #2b6cb0;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #1e4e8c;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Это HTML — структура страницы -->
+    <header>
+        <h1>Привет, я Максим!</h1>
+        <p>Начинающий веб-разработчик</p>
+    </header>
+
+    <main>
+        <div class="card">
+            <h2>Обо мне</h2>
+            <p>Я учусь делать сайты. Это моя первая страница, и она уже работает!</p>
+        </div>
+
+        <div class="card">
+            <h2>Мои навыки</h2>
+            <ul>
+                <li>HTML — структура</li>
+                <li>CSS — оформление</li>
+                <li>JavaScript — скоро будет!</li>
+            </ul>
+            <button onclick="sayHello()">Нажми на меня</button>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Моя первая страница
+    </footer>
+
+    <script>
+        // Это JavaScript — интерактивность
+        function sayHello() {
+            alert('Ура! JavaScript работает! 🎉');
+        }
+    </script>
+
+</body>
+</html>
